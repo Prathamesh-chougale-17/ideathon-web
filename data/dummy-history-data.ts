@@ -1,4 +1,4 @@
-export const dummyLiveData = [
+export const HistoryData = [
   {
     Orgid: "1",
     Name: "Emergency Response Center",
@@ -14,7 +14,7 @@ export const dummyLiveData = [
     State: "Maharashtra",
     Country: "India",
     Pincode: "400001",
-    MapLocation: "https://maps.google.com/?q=19.0760,72.8777",
+    Cause: "It cause fire due to induction stove",
     image: "/fire.png",
     isPersondetected: true,
   },
@@ -33,7 +33,7 @@ export const dummyLiveData = [
     State: "Maharashtra",
     Country: "India",
     Pincode: "400002",
-    MapLocation: "https://maps.google.com/?q=19.0830,72.8800",
+    Cause: "It cause fire due to short circuit",
     image: "/fire.png",
     isPersondetected: true,
   },
@@ -52,7 +52,7 @@ export const dummyLiveData = [
     State: "Maharashtra",
     Country: "India",
     Pincode: "400002",
-    MapLocation: "https://maps.google.com/?q=19.0830,72.8800",
+    Cause: "It cause fire due to Gas cylinder blast",
     image: "/fire.png",
     isPersondetected: true,
   },
