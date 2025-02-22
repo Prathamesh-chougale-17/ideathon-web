@@ -1,10 +1,10 @@
-import LiveOrgPage from "@/components/live-section";
+import OrgLiveOrgPage from "@/components/org-livesection";
 import React from "react";
 
 const LivePage = () => {
   return (
     <div>
-      <LiveOrgPage />
+      <OrgLiveOrgPage />
     </div>
   );
 };
