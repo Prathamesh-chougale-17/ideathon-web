@@ -2,42 +2,25 @@ import React from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import { MapPin, Building2, DoorOpen } from "lucide-react";
-
-interface LiveCardProps {
-  Name: string;
-  BuildingNo: string;
-  BuildingName: string;
-  FloorNo: string;
-  FloorName: string;
-  RoomNo: string;
-  RoomName: string;
-  AreaName: string;
-  Address: string;
-  City: string;
-  State: string;
-  Country: string;
-  Pincode: string;
-  MapLocation: string;
-  image: string;
-}
+import { LiveLocation } from "@/types";
 
 const LiveCard = ({
-  Name,
-  BuildingNo,
-  BuildingName,
-  FloorNo,
-  FloorName,
-  RoomNo,
-  RoomName,
-  AreaName,
-  Address,
-  City,
-  State,
-  Country,
-  Pincode,
-  MapLocation,
+  org_name,
+  address,
+  area_name,
+  building_name,
+  building_no,
+  city,
+  country,
+  floor_name,
+  floor_no,
+  pincode,
+  room_name,
+  room_no,
+  state,
+  map_location,
   image,
-}: LiveCardProps) => {
+}: LiveLocation) => {
   return (
     <Card className="max-w-[400px] overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <CardHeader className="relative p-4">
@@ -49,13 +32,15 @@ const LiveCard = ({
             </div>
             <span className="text-sm font-medium text-red-500">LIVE</span>
           </div>
-          <h3 className="text-lg font-bold truncate">{Name}</h3>
+          <h3 className="text-lg font-bold truncate">{org_name}</h3>
         </div>
       </CardHeader>
       <CardContent className="p-4 pt-0 space-y-4">
         <div className="relative h-[200px] w-full overflow-hidden rounded-lg">
           <Image
-            src={image}
+            src={`https://drive.google.com/uc?id=${
+              image.split("/")[5].split("?")[0]
+            }`}
             alt="Location Image"
             fill
             className="object-cover hover:scale-105 transition-transform duration-300"
@@ -67,9 +52,9 @@ const LiveCard = ({
             <Building2 className="w-4 h-4 mt-1 text-muted-foreground" />
             <div className="flex-1">
               <p className="text-sm font-medium">
-                {BuildingName} ({BuildingNo})
+                {building_name} ({building_no})
               </p>
-              <p className="text-xs text-muted-foreground">{AreaName}</p>
+              <p className="text-xs text-muted-foreground">{area_name}</p>
             </div>
           </div>
 
@@ -77,10 +62,10 @@ const LiveCard = ({
             <DoorOpen className="w-4 h-4 mt-1 text-muted-foreground" />
             <div className="flex-1">
               <p className="text-sm">
-                Floor {FloorNo} ({FloorName})
+                Floor {floor_no} ({floor_name})
               </p>
               <p className="text-sm">
-                Room {RoomNo} ({RoomName})
+                Room {room_no} ({room_name})
               </p>
             </div>
           </div>
@@ -89,18 +74,18 @@ const LiveCard = ({
             <MapPin className="w-4 h-4 mt-1 text-muted-foreground" />
             <div className="flex-1">
               <p className="text-xs text-muted-foreground">
-                {Address}, {City}, {State}
+                {address}, {city}, {state}
               </p>
               <p className="text-xs text-muted-foreground">
-                {Country} - {Pincode}
+                {country} - {pincode}
               </p>
             </div>
           </div>
         </div>
 
-        {MapLocation && (
+        {map_location && (
           <a
-            href={MapLocation}
+            href={map_location}
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center text-sm bg-primary/10 text-primary py-2 rounded-md hover:bg-primary/20 transition-colors"

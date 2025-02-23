@@ -1,11 +1,23 @@
 import LiveCard from "@/components/livecard";
-import { dummyLiveData } from "@/data/dummy-live-data";
+import { getLiveLocations } from "@/service/live";
 import React from "react";
 
-const DynamicLive = ({ params }: { params: { orgid: string } }) => {
-  const filteredHistory = dummyLiveData.filter(
-    (live) => live.Orgid === params.orgid
-  );
+const DynamicLive = async ({
+  params,
+}: {
+  params: Promise<{ orgid: string }>;
+}) => {
+  const liveData = await getLiveLocations();
+
+  const { orgid } = await params;
+  if (!liveData) {
+    return (
+      <div className="container mx-auto px-4 py-8 text-center">
+        <p>No live data available</p>
+      </div>
+    );
+  }
+  const filteredliveData = liveData.filter((live) => live.org_id === orgid);
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
@@ -18,7 +30,7 @@ const DynamicLive = ({ params }: { params: { orgid: string } }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredHistory.map((org, index) => (
+        {filteredliveData.map((org, index) => (
           <div className="w-full max-w-sm mx-auto" key={index}>
             <LiveCard key={index} {...org} />
           </div>
@@ -26,7 +38,7 @@ const DynamicLive = ({ params }: { params: { orgid: string } }) => {
       </div>
 
       <div className="mt-8 text-center text-sm text-muted-foreground">
-        <p>Showing {filteredHistory.length} active response units</p>
+        <p>Showing {filteredliveData.length} active response units</p>
       </div>
     </div>
   );

@@ -1,10 +1,24 @@
-import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { 
-  Flame, User, Box, Cloud, Camera, Cpu, 
-  Gauge, Zap, Layers, Binary, Activity 
-} from 'lucide-react';
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import {
+  Flame,
+  User,
+  Box,
+  Cloud,
+  Camera,
+  Cpu,
+  Gauge,
+  Zap,
+  Layers,
+  Binary,
+  Activity,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
@@ -15,7 +29,10 @@ const HomePage = () => {
       <main className="flex-grow container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 mb-4">
-            <Badge variant="outline" className="text-blue-500 dark:text-blue-400">
+            <Badge
+              variant="outline"
+              className="text-blue-500 dark:text-blue-400"
+            >
               AI-Powered
             </Badge>
           </div>
@@ -23,7 +40,8 @@ const HomePage = () => {
             Advanced AI Detection & Environmental Clearing
           </h1>
           <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Powered by YOLOv12 for precise detection and state-of-the-art dehazing algorithms
+            Powered by YOLOv12 for precise detection and state-of-the-art
+            dehazing algorithms
           </p>
         </div>
 
@@ -33,7 +51,9 @@ const HomePage = () => {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Camera className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                <CardTitle className="text-slate-900 dark:text-slate-50">Detection Capabilities</CardTitle>
+                <CardTitle className="text-slate-900 dark:text-slate-50">
+                  Detection Capabilities
+                </CardTitle>
               </div>
               <CardDescription className="dark:text-slate-400">
                 Powered by YOLOv12 Technology
@@ -44,22 +64,34 @@ const HomePage = () => {
                 <li className="flex items-center gap-3">
                   <Flame className="h-5 w-5 text-red-500 dark:text-red-400" />
                   <div>
-                    <p className="font-medium text-slate-900 dark:text-slate-50">Fire Detection</p>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">Real-time fire and smoke detection with high accuracy</p>
+                    <p className="font-medium text-slate-900 dark:text-slate-50">
+                      Fire Detection
+                    </p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      Real-time fire and smoke detection with high accuracy
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-center gap-3">
                   <User className="h-5 w-5 text-green-500 dark:text-green-400" />
                   <div>
-                    <p className="font-medium text-slate-900 dark:text-slate-50">Human Detection</p>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">Advanced human presence detection and tracking</p>
+                    <p className="font-medium text-slate-900 dark:text-slate-50">
+                      Human Detection
+                    </p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      Advanced human presence detection and tracking
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-center gap-3">
                   <Box className="h-5 w-5 text-purple-500 dark:text-purple-400" />
                   <div>
-                    <p className="font-medium text-slate-900 dark:text-slate-50">Object Detection</p>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">Multi-class object detection and classification</p>
+                    <p className="font-medium text-slate-900 dark:text-slate-50">
+                      Object Detection
+                    </p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">
+                      Multi-class object detection and classification
+                    </p>
                   </div>
                 </li>
               </ul>
@@ -70,7 +102,9 @@ const HomePage = () => {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Cloud className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                <CardTitle className="text-slate-900 dark:text-slate-50">Environmental Clearing</CardTitle>
+                <CardTitle className="text-slate-900 dark:text-slate-50">
+                  Environmental Clearing
+                </CardTitle>
               </div>
               <CardDescription className="dark:text-slate-400">
                 Advanced Dehazing Algorithms
@@ -79,19 +113,26 @@ const HomePage = () => {
             <CardContent>
               <div className="space-y-4">
                 <div className="border-l-2 border-blue-500 dark:border-blue-400 pl-4">
-                  <h3 className="font-medium text-slate-900 dark:text-slate-50">Fog & Haze Removal</h3>
+                  <h3 className="font-medium text-slate-900 dark:text-slate-50">
+                    Fog & Haze Removal
+                  </h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    Real-time dehazing with preservation of natural colors and details
+                    Real-time dehazing with preservation of natural colors and
+                    details
                   </p>
                 </div>
                 <div className="border-l-2 border-blue-500 dark:border-blue-400 pl-4">
-                  <h3 className="font-medium text-slate-900 dark:text-slate-50">Smoke Clearing</h3>
+                  <h3 className="font-medium text-slate-900 dark:text-slate-50">
+                    Smoke Clearing
+                  </h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
                     Advanced smoke pattern recognition and removal algorithms
                   </p>
                 </div>
                 <div className="border-l-2 border-blue-500 dark:border-blue-400 pl-4">
-                  <h3 className="font-medium text-slate-900 dark:text-slate-50">Image Enhancement</h3>
+                  <h3 className="font-medium text-slate-900 dark:text-slate-50">
+                    Image Enhancement
+                  </h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
                     Automatic contrast and clarity optimization
                   </p>
@@ -134,15 +175,21 @@ const HomePage = () => {
                     <ul className="space-y-3 text-sm">
                       <li className="flex items-center gap-2">
                         <Binary className="h-4 w-4 text-blue-500" />
-                        <span className="text-slate-600 dark:text-slate-400">YOLOv12 architecture</span>
+                        <span className="text-slate-600 dark:text-slate-400">
+                          YOLOv12 architecture
+                        </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <Activity className="h-4 w-4 text-blue-500" />
-                        <span className="text-slate-600 dark:text-slate-400">Real-time processing</span>
+                        <span className="text-slate-600 dark:text-slate-400">
+                          Real-time processing
+                        </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <Layers className="h-4 w-4 text-blue-500" />
-                        <span className="text-slate-600 dark:text-slate-400">Multi-object tracking</span>
+                        <span className="text-slate-600 dark:text-slate-400">
+                          Multi-object tracking
+                        </span>
                       </li>
                     </ul>
                   </CardContent>
@@ -162,15 +209,21 @@ const HomePage = () => {
                     <ul className="space-y-3 text-sm">
                       <li className="flex items-center gap-2">
                         <Binary className="h-4 w-4 text-purple-500" />
-                        <span className="text-slate-600 dark:text-slate-400">Deep learning based</span>
+                        <span className="text-slate-600 dark:text-slate-400">
+                          Deep learning based
+                        </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <Activity className="h-4 w-4 text-purple-500" />
-                        <span className="text-slate-600 dark:text-slate-400">Adaptive processing</span>
+                        <span className="text-slate-600 dark:text-slate-400">
+                          Adaptive processing
+                        </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <Layers className="h-4 w-4 text-purple-500" />
-                        <span className="text-slate-600 dark:text-slate-400">Color preservation</span>
+                        <span className="text-slate-600 dark:text-slate-400">
+                          Color preservation
+                        </span>
                       </li>
                     </ul>
                   </CardContent>
@@ -190,15 +243,21 @@ const HomePage = () => {
                     <ul className="space-y-3 text-sm">
                       <li className="flex items-center gap-2">
                         <Zap className="h-4 w-4 text-green-500" />
-                        <span className="text-slate-600 dark:text-slate-400">Low latency</span>
+                        <span className="text-slate-600 dark:text-slate-400">
+                          Low latency
+                        </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <Activity className="h-4 w-4 text-green-500" />
-                        <span className="text-slate-600 dark:text-slate-400">High accuracy</span>
+                        <span className="text-slate-600 dark:text-slate-400">
+                          High accuracy
+                        </span>
                       </li>
                       <li className="flex items-center gap-2">
                         <Layers className="h-4 w-4 text-green-500" />
-                        <span className="text-slate-600 dark:text-slate-400">Scalable processing</span>
+                        <span className="text-slate-600 dark:text-slate-400">
+                          Scalable processing
+                        </span>
                       </li>
                     </ul>
                   </CardContent>

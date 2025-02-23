@@ -51,7 +51,9 @@ const OrgLiveCard = ({
       <CardContent className="p-4 pt-0 space-y-4">
         <div className="relative h-[200px] w-full overflow-hidden rounded-lg">
           <Image
-            src={image}
+            src={`https://drive.google.com/uc?id=${
+              image.split("/")[5].split("?")[0]
+            }`}
             alt="Location Image"
             fill
             className="object-cover hover:scale-105 transition-transform duration-300"
