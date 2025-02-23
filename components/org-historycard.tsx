@@ -32,6 +32,16 @@ const OrgHistoryCard = ({
   image,
   Orgid,
 }: OrgHistoryCardProps) => {
+  if (image.includes("google")) {
+    image = `https://drive.google.com/uc?id=${
+      image.split("/")[5].split("?")[0]
+    }`;
+  }
+  if (image.includes("drive")) {
+    image = `https://drive.google.com/uc?id=${
+      image.split("/")[5].split("?")[0]
+    }`;
+  }
   return (
     <Card className="max-w-[400px] overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <CardHeader className="relative p-4">
@@ -48,9 +58,7 @@ const OrgHistoryCard = ({
       <CardContent className="p-4 pt-0 space-y-4">
         <div className="relative h-[200px] w-full overflow-hidden rounded-lg">
           <Image
-            src={`https://drive.google.com/uc?id=${
-              image.split("/")[5].split("?")[0]
-            }`}
+            src={image}
             alt="Location Image"
             fill
             className="object-cover hover:scale-105 transition-transform duration-300"
