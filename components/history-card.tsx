@@ -46,7 +46,7 @@ const HistoryCard = ({
             <div className="relative flex h-3 w-3">
                 <div className="absolute top-0 right-0 h-3 w-3 bg-green-500 rounded-full ring-2 ring-white"></div>
             </div>
-            <span className="text-sm font-medium text-red-500">Closed</span>
+            <span className="text-sm font-medium text-green-500">Closed</span>
           </div>
           <h3 className="text-lg font-bold truncate">{Name}</h3>
         </div>

@@ -7,7 +7,7 @@ const OrgHistoryPage = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-center mb-2">
-          Live Emergency Response
+          History Emergency Response
         </h1>
         <p className="text-muted-foreground text-center">
           Real-time monitoring of active emergency response units

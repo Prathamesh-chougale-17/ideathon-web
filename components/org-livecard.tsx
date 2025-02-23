@@ -96,7 +96,7 @@ const OrgLiveCard = ({
           href={`/live/${Orgid}`}
           className="text-sm font-medium text-red-500 hover:underline"
         >
-          <Button className="w-full cursor-pointer" variant={"ghost"}>
+          <Button className="w-full cursor-pointer" variant={"destructive"}>
             View Live
           </Button>
         </Link>
