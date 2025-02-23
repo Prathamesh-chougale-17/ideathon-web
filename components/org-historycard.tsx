@@ -37,11 +37,6 @@ const OrgHistoryCard = ({
       image.split("/")[5].split("?")[0]
     }`;
   }
-  if (image.includes("drive")) {
-    image = `https://drive.google.com/uc?id=${
-      image.split("/")[5].split("?")[0]
-    }`;
-  }
   return (
     <Card className="max-w-[400px] overflow-hidden hover:shadow-lg transition-shadow duration-300">
       <CardHeader className="relative p-4">

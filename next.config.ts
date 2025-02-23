@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         hostname: "drive.google.com",
         protocol: "https",
       },
+      {
+        hostname: "narad-kdmq.onrender.com",
+        protocol: "https",
+      },
     ],
   },
 };
