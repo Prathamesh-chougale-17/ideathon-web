@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
-import { MapPin, Building2, DoorOpen } from "lucide-react";
+import { MapPin, Building2 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -85,7 +85,9 @@ const OrgHistoryCard = ({
             href={`/history/${Orgid}`}
             className="text-sm font-medium text-red-500 hover:underline"
           >
-            <Button className="w-full cursor-pointer" variant={"default"}>View History</Button>
+            <Button className="w-full cursor-pointer" variant={"default"}>
+              View History
+            </Button>
           </Link>
         </div>
       </CardContent>
